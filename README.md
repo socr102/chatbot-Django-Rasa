@@ -1,1 +1,1 @@
-# chatbot-Django-Rasa
+# mazamachatbot
