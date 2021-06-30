@@ -1,24 +1,8 @@
 import re
 import requests
-from bs4 import BeautifulSoup
-from selenium import webdriver
+#from bs4 import BeautifulSoup
+#from selenium import webdriver
 
-def selectedChoice(message):
-    message = str(message).lower()
-    if "email" in message:
-        choice = "email"
-        return choice
-    elif "mail" in message:
-        choice = "mail"
-        return choice
-    elif "phone" in message:
-        choice = "phone"
-        return choice
-    elif "zip" in message:
-        choice = "zip"
-        return choice
-
- 
 
 def extractpincode(message):
     numbers = re.findall('[0-9]+', message)
@@ -36,9 +20,35 @@ def extractphone(message):
         return numbers[0] 
     else:return []
         
+#for FlowChatTracker
 
+def selectedChoice(message):
+    message = str(message).lower()
+    if "email" in message:
+        choice = "email"
+        return choice
+    elif "mail" in message:
+        choice = "mail"
+        return choice
+    elif "phone" in message:
+        choice = "phone"
+        return choice
+    elif "zip" in message:
+        choice = "zip"
+        return choice
+
+ 
+#flowchat1
+def extractZipCode(message):
+    response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+str(message)+'&key=AIzaSyAJGToD7umZ-VdfAl95vSnd1AlxVxt9lUI')
+    status = response.json()['status']
+    if status=="OK":
+        return "yes"
+    else:
+        return "no"  
+    
+#flowchat2    
 def checkEmailAddress(email):  
-    print(email) 
     response = requests.get("https://isitarealemail.com/api/email/validate",params = {"email": email})
 
     status = response.json()['status']
@@ -49,17 +59,9 @@ def checkEmailAddress(email):
     else:
         return 'yes'   
 
-
-
-
-# number = orignalnumber.replace('-','').replace('(','').replace(')','').replace('+','').strip()
-# if len(number)==11:
-#     print(orignalnumber)
-
-#for ChartTracker1 
-def extractZipCode(message):
-    response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address='+str(message)+'&key=AIzaSyAJGToD7umZ-VdfAl95vSnd1AlxVxt9lUI')
-    status = response.json()['status']
-    if status=="OK":
-        return "yes"
-    else:return "no"    
+#flowchat3
+def ExtractUserConfigurations(token):
+    url ='https://lifeline.cgmllc.net/api/v2/userconfiguration'
+    myobj ={'Token': 'd3a1b634-90a7-eb11-a963-005056a96ce9'}
+    x = requests.post(url, data = myobj)
+    

@@ -38,4 +38,10 @@ else:
   print("email was unknown")
 
 
-const response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address='+inputData.zipcode+'&key=AIzaSyAJGToD7umZ-VdfAl95vSnd1AlxVxt9lUI');const json = await response.json();const cities = json.results[0].formatted_address;const state = json.results[0].address_components[3].short_name;return {"address" : cities, "stconst response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address='+inputData.zipcode+'&key=AIzaSyAJGToD7umZ-VdfAl95vSnd1AlxVxt9lUI');const json = await response.json();const cities = json.results[0].formatted_address;const state = json.results[0].address_components[3].short_name;return {"address" : cities, "state" : state, "response": json};
+const response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address='+inputData.zipcode+'&key=AIzaSyAJGToD7umZ-VdfAl95vSnd1AlxVxt9lUI');
+const json = await response.json();
+const cities = json.results[0].formatted_address;
+const state = json.results[0].address_components[3].short_name;return {"address" : cities, "stconst response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address='+inputData.zipcode+'&key=AIzaSyAJGToD7umZ-VdfAl95vSnd1AlxVxt9lUI');
+const json = await response.json();
+const cities = json.results[0].formatted_address;
+const state = json.results[0].address_components[3].short_name;return {"address" : cities, "state" : state, "response": json};
