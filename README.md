@@ -1,1 +1,1 @@
-# mazamachatbot
+# mazamamedia_chatbot

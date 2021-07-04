@@ -3,4 +3,6 @@ from .models import *
 # Register your models here.
 
  
-admin.site.register(FlowChatTracker)
+admin.site.register(ChatTracker)
+admin.site.register(UserConfiguration)
+admin.site.register(StartOrder)
