@@ -1,5 +1,3 @@
-python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api
+rasa run -m models --enable-api --cors "*" --debug
 
-python -m http.server 8000
-
-localhost:8000/index
+rasa run actions
