@@ -1,0 +1,71 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: weather
+  examples:  |
+    -what's the weather
+    -what is the temperature today
+    -what is the tempereature
+    -i want to know the tempereature
+    -i want to know the weather of today
+    -tell me the weather forecast
+    -hows the weather today
+- intent: weather_for_location
+  examples: |
+     -what is the weather in [Noida](location)
+     -wat is the weather in [New Delhi](location)
+     -weather of [Mumbai](location)
+     -Today's weather in [Bangalore](location)
+     -[Kolkata](location) weather
+     -Tell me weather of [Hyderabad](location)
+     -Can you tell me weather of [London](location)
+- intent: city_info
+  examples: |
+      - [New Delhi](location)
+      - [India](location)
+      - [Mumbai](location)
+      - [Noida](location)
+      - [Kolkata](location)
+      - [Bangalore](location)
+      - [London](location)
+- intent: thanks
+  examples: |
+      -thanks
+      -thank you
+      -ok      

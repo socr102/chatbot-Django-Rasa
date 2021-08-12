@@ -1,4 +1,0 @@
-token = d3a1b634-90a7-eb11-a963-005056a96ce9
-flowchat3-api   :  https://lifeline.cgmllc.net/api/v2/userconfiguration
-
-pip install sl-zerobounce
