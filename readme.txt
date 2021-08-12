@@ -1,0 +1,5 @@
+python -m rasa run --m ./models --endpoints endpoints.yml --port 5005 -vv --enable-api
+
+python -m http.server 8000
+
+localhost:8000/index
